@@ -1,0 +1,173 @@
+body{
+    background-color: #E7DACD;
+    overflow-x: hidden;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+} 
+
+img.animated.pulse {
+    animation-duration: 5s;
+}
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+}
+
+a.btn {
+    background-color: #764C2E;
+    color: #ffffff; 
+}
+
+.btn.btn-primary {
+    color: var(--bs-white);
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+
+
+/*** Navbar ***/
+.logo{
+    height: 50px;
+    width: 70px;
+}
+
+.navbar {
+    position: static;
+    padding: 11px 0 ;
+    height: 85px;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 45px;
+    padding: 0;
+    color: black;
+    font-weight: 500;
+    transition: .5s;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--bs-white); /* Change the color to white */
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav {
+        padding: 0 15px;
+        background: var(--bs-primary);
+    }
+
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/*** Hero Header ***/
+.hero-header {
+    position: relative;
+    height:770px;
+    margin-top: -85px;
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    background: url(../img/products/img_products.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/*** bowls ***/
+.bowls{
+    margin-bottom: -250px;
+
+}
+
+/*** Footer ***/
+.footer{
+    background-color: #764C2E;
+    position:center;
+    margin-top: 0px;
+}
+
+.footer-nav a{
+    position:center;
+    color:#ffffff;
+}
+
+.bi-arrow-up {
+    background-color: #000000;
+    width: 50px; 
+    height: 45px;
+    border-radius: 50%;
+    text-align: center; 
+    line-height: 50px; 
+    color: white; 
+    font-size: 24px; 
+}
